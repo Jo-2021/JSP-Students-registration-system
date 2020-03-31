@@ -19,5 +19,16 @@ Technologies used:
 <p>Database file (student.sql) has been included in this project and should be imported to a server (xampp localhost).<br>
 MySQL JDBC Driver (mysql-connector-java-5.1.23-bin.jar) has been added to the library<p>
 
-<h4><b>Index.jsp</b><h4>
-<p>Displays a form to get students reccord and display on a table.</p>
+<h4><b>index.jsp</b><h4>
+<p>Displays a form to get students record and display on a table.</p>
+![stud3](https://user-images.githubusercontent.com/57018279/77974233-6a559d00-72ee-11ea-879c-4cf005ce5467.PNG)
+  
+<h4><b>edit.jsp</b><h4>
+<p>Displays a form to get students record to edit.</p>
+![stud3](https://user-images.githubusercontent.com/57018279/77974233-6a559d00-72ee-11ea-879c-4cf005ce5467.PNG)
+  
+  <h4><b>delete.jsp</b><h4>
+<p>When a user clicks on the 'delete' link from the index page, the delete.jsp page removes the selected record.</p>
+![stud3](https://user-images.githubusercontent.com/57018279/77974233-6a559d00-72ee-11ea-879c-4cf005ce5467.PNG)
+  
+  
