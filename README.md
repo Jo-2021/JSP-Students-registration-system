@@ -17,7 +17,8 @@ Technologies used:
     Database Table: <b>register</b><br>
 </p>
 <p>Database file (student.sql) has been included in this project and should be imported to a server (xampp localhost).<br>
-MySQL JDBC Driver (mysql-connector-java-5.1.23-bin.jar) has been added to the library<p>
+MySQL JDBC Driver (mysql-connector-java-5.1.23-bin.jar) has been added to the library (/build/web/WEB-INF/lib/
+)<p>
 
 <h4><b>index.jsp</b><h4>
 <p>Displays a form to get students record and display on a table.</p>
