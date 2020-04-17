@@ -12,8 +12,11 @@
     {
         Class.forName("com.mysql.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "");
-        Statement st=conn.createStatement();
-        st.executeUpdate("DELETE FROM register WHERE id="+id);
+        
+        String sql = "DELETE FROM register WHERE id=" + id;
+        
+        PreparedStatement st = conn.prepareStatement(sql);
+        st.executeUpdate();
     
 %>
             <script>
