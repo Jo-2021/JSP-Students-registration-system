@@ -20,7 +20,6 @@
         
         Connection con = null;
         PreparedStatement pst = null;
-        ResultSet rs;
         
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url, user, pwd);
