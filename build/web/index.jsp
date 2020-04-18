@@ -111,7 +111,7 @@
                                 con = DriverManager.getConnection(url, user, pwd);
                                 String query = "SELECT * FROM register";
                                 
-                                pst = (PreparedStatement)con.prepareStatement(query);
+                                pst = con.prepareStatement(query);
                                 rs = pst.executeQuery();
 
                                 while(rs.next()){
