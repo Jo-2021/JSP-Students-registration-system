@@ -6,7 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
-<%@page import="com.mysql.jdbc.PreparedStatement" %>
 <% 
     if(request.getParameter("submit") != null){
         String fName = request.getParameter("fname");
@@ -21,14 +20,13 @@
         
         Connection con = null;
         PreparedStatement pst = null;
-        ResultSet rs;
         
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url, user, pwd);
         
             String sql = "INSERT INTO register(first_name, last_name, course, fee) VALUES(?, ?, ?, ?)";
             
-            pst = (PreparedStatement)con.prepareStatement(sql);
+            pst = con.prepareStatement(sql);
             
             pst.setString(1, fName);
             pst.setString(2, lName);
