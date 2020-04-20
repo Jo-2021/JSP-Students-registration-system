@@ -21,6 +21,7 @@
         Connection con = null;
         PreparedStatement pst = null;
         
+        try{
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(url, user, pwd);
         
@@ -39,7 +40,10 @@
             <script>
                    alert("Record Added Successfully"); 
             </script>
-             <%    
+             <%
+             }catch(Exception ex){
+                 out.println(ex);
+             }
     }
  
 %>
@@ -106,15 +110,16 @@
                                 Connection con = null;
                                 PreparedStatement pst = null;
                                 ResultSet rs;
-
-                                Class.forName("com.mysql.jdbc.Driver");
-                                con = DriverManager.getConnection(url, user, pwd);
-                                String query = "SELECT * FROM register";
                                 
-                                pst = con.prepareStatement(query);
-                                rs = pst.executeQuery();
+                                try{
+                                    Class.forName("com.mysql.jdbc.Driver");
+                                    con = DriverManager.getConnection(url, user, pwd);
+                                    String query = "SELECT * FROM register";
 
-                                while(rs.next()){
+                                    pst = con.prepareStatement(query);
+                                    rs = pst.executeQuery();
+
+                                    while(rs.next()){
                                     
                             %>
                             
@@ -129,6 +134,9 @@
                                 </tr>
                             </tbody>
                             <%
+                                    }
+                                }catch(Exception ex){
+                                    out.println(ex);
                                 }
                             %>
                         </table>
