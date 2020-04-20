@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="java.sql.*,java.util.*"%>
+<%@page import="java.sql.*"%>
 <%
     String id = request.getParameter("id");
     try
