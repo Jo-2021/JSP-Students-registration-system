@@ -67,7 +67,7 @@
                                 con = DriverManager.getConnection(url, user, pwd);
                                 String query = "SELECT * FROM register WHERE id = ?";
                                 
-                                pst = (PreparedStatement)con.prepareStatement(query);
+                                pst = con.prepareStatement(query);
                                 pst.setString(1, id);
                                 
                                 rs = pst.executeQuery();
